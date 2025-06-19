@@ -13,8 +13,26 @@
         <style>
             body {
                 font-family: "Inter", sans-serif;
-                background-color: #f3f4f6; /* Light gray background */
+                background-color: #f0f4f8; /* Softer light gray background, consistent with index.html */
+                line-height: 1.6;
+                color: #334155; /* Darker text for better readability */
             }
+            /* Custom scrollbar for better aesthetics, matching the clean design */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #e2e8f0;
+                border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: #94a3b8;
+                border-radius: 10px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #64748b;
+            }
+            /* Details/Summary styling for accordion effect */
             details summary {
                 cursor: pointer;
                 list-style: none; /* Remove default marker */
@@ -24,10 +42,13 @@
             details summary::before {
                 content: "+"; /* Plus sign for closed state */
                 position: absolute;
-                right: 0;
+                right: 1.5rem; /* Adjusted for padding */
                 top: 50%;
                 transform: translateY(-50%);
                 transition: transform 0.2s ease-in-out;
+                font-size: 1.5rem; /* Larger plus/minus sign */
+                font-weight: bold;
+                color: white; /* Color for the icon */
             }
             details[open] summary::before {
                 content: "-"; /* Minus sign for open state */
@@ -54,24 +75,22 @@
                 <!-- 会社について -->
                 <section>
                     <h2
-                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-indigo-200"
+                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-blue-600"
                     >
                         会社について
                     </h2>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q1.
                                 THYM（タイム）という会社はどんな会社ですか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A1.
                                 THYMは、主にセールスプロモーション事業を展開している会社です。営業を通じて「人の成長」をサポートし、将来の経営者を輩出する土台作りを目指しています。
@@ -79,53 +98,47 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q2. THYMの所在地はどこですか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">A2. 東京都に本社があります。</p>
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q3. THYMはいつ設立されましたか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A3. 設立から11年目を迎えています。
                             </p>
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q4.
                                 THYMが設立された背景には何がありますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A4.
                                 創業者が営業職との出会いを通じて自身の人生が大きく変わった経験があり、その経験から得た「人の成長」への強い想いが会社の根幹にあり、起業に至りました。
@@ -133,18 +146,16 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q5. THYMのビジョンは何ですか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A5.
                                 「四方よし」をビジョンとして掲げています。これは、売り手、買い手、取引先、そして未来のすべてに良い影響を与える会社を目指すという意味です。関わるすべての人々、そして社会全体にポジティブな価値を提供することを目指しています。
@@ -156,23 +167,21 @@
                 <!-- 主な事業内容 -->
                 <section>
                     <h2
-                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-indigo-200"
+                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-blue-600"
                     >
                         主な事業内容
                     </h2>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q6. THYMの主な事業内容は何ですか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A6. THYMは以下の6つの事業を展開しています。
                             </p>
@@ -221,24 +230,22 @@
                 <!-- 取り扱い商品 -->
                 <section>
                     <h2
-                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-indigo-200"
+                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-blue-600"
                     >
                         取り扱い商品
                     </h2>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q7.
                                 THYMはどのような商品を取り扱っていますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A7. THYMは主に以下の商品を取り扱っています。
                             </p>
@@ -275,24 +282,22 @@
                 <!-- 今後の展望・ビジネスモデル -->
                 <section>
                     <h2
-                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-indigo-200"
+                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-blue-600"
                     >
                         今後の展望・ビジネスモデル
                     </h2>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q8.
                                 THYMの今後の展望やビジネスモデルについて教えてください。</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A8.
                                 THYMは以下の点に注力し、事業の成長を目指しています。
@@ -324,24 +329,22 @@
                 <!-- 給与体系・評価制度 -->
                 <section>
                     <h2
-                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-indigo-200"
+                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-blue-600"
                     >
                         給与体系・評価制度
                     </h2>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q9.
                                 THYMの給与体系や評価制度はどのようになっていますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A9.
                                 安定した固定給に加えて、成果に応じて4種類のインセンティブが支給される制度を導入しています。個人の努力と成果が公正に評価され、それが直接収入に反映される仕組みです。詳細は会社説明会や個別面談で詳しく説明されます。
@@ -353,24 +356,22 @@
                 <!-- 募集職種 -->
                 <section>
                     <h2
-                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-indigo-200"
+                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-blue-600"
                     >
                         募集職種
                     </h2>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q10.
                                 現在、どのような職種を募集していますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A10.
                                 主に「営業職」「事務職」「動画編集職」を募集しています。
@@ -383,19 +384,17 @@
                         営業職
                     </h3>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q11.
                                 営業職にはどんな人が求められていますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A11.
                                 人と話すことが上手くなりたい方、説明能力や商品を売る能力を向上させたい方、そして3年後の起業・独立を志す方を歓迎しています。未経験者も歓迎です。
@@ -403,18 +402,16 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q12. 営業職の雇用条件を教えてください。</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 <strong class="font-semibold">雇用形態</strong>:
                                 正社員（試用期間3ヶ月あり）
@@ -444,18 +441,16 @@
                         事務職
                     </h3>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q13. 事務職の業務内容は何ですか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A13.
                                 営業部門・管理部門を支えるバックオフィス業務で、主にGoogle
@@ -465,19 +460,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q14.
                                 事務職で歓迎されるスキルや資格はありますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A14. Google
                                 Workspace管理者認定資格、Googleデータアナリティクスプロフェッショナル認定、Google
@@ -489,19 +482,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q15.
                                 事務職にはどんな人が求められていますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A15.
                                 数字やデータを正確に扱うのが得意な方、コツコツと作業を進めるのが好きな方、整理整頓・効率化が好きな方、GoogleやMicrosoftのツールを使った業務に関心がある方を求めています。
@@ -509,18 +500,16 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q16. 事務職の雇用条件を教えてください。</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 <strong class="font-semibold">雇用形態</strong>:
                                 正社員（試用期間3ヶ月あり）
@@ -545,18 +534,16 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q17. 事務職の福利厚生には何がありますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A17.
                                 社会保険完備、各種スキルアップ支援制度、PC貸与、Google
@@ -571,18 +558,16 @@
                         動画編集職
                     </h3>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q18. 動画編集職の業務内容は何ですか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A18.
                                 自社およびクライアントのSNS・WEBコンテンツに使用する動画の企画・編集を担当します。会社の魅力や事業内容を伝える映像制作が中心で、社内インタビューや営業風景の撮影補助、短尺動画の企画・編集、テロップ挿入、BGM、SE、簡単なモーショングラフィックの作成などを行います。
@@ -590,19 +575,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q19.
                                 動画編集ではどんなソフトを使いますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A19. Adobe Premiere Pro（推奨）、After
                                 Effects（歓迎）、CapCut / Canva Pro / DaVinci
@@ -611,19 +594,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q20.
                                 動画編集職で歓迎されるスキルや経験はありますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A20.
                                 SNS動画編集経験（ショート・リール・YouTubeなど）、モーショングラフィックの基礎知識、写真や動画撮影の補助経験、Adobe
@@ -633,19 +614,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q21.
                                 動画編集職にはどんな人が求められていますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A21.
                                 自分の編集で「人の心を動かしたい」と思っている方、社内メンバーと連携しながら作業できる方、実務経験よりも"作品の質"で勝負したい方、会社の世界観を映像で表現するのが好きな方を求めています。
@@ -653,19 +632,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q22.
                                 動画編集職の雇用条件を教えてください。</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 <strong class="font-semibold">雇用形態</strong>:
                                 正社員または業務委託（副業・週3日〜のパートタイムも応相談）
@@ -690,19 +667,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q23.
                                 動画編集職（正社員の場合）の福利厚生には何がありますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A23.
                                 社会保険完備、映像機材貸与（編集用PC・モニターなど）、外部講座・Udemy補助、社員割引、社内イベントなどがあります。
@@ -710,19 +685,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q24.
                                 動画編集職の選考プロセスを教えてください。</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A24. 1. ポートフォリオまたは過去作品の提出 → 2.
                                 オンライン面談 → 3. トライアル（任意）→
@@ -735,24 +708,22 @@
                 <!-- 新メンバーへのメッセージとその他 -->
                 <section>
                     <h2
-                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-indigo-200"
+                        class="text-2xl font-semibold text-gray-700 mb-4 pb-2 border-b-2 border-blue-600"
                     >
                         新メンバーへのメッセージとその他
                     </h2>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q25.
                                 新しくTHYMに入社するメンバーへのメッセージはありますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A25.
                                 営業という仕事は、ただ商品を売るだけでなく「人を変える力」を持っています。お客様の課題を解決し、喜んでいただくことで、私たち自身も成長し、大きな達成感を得ることができます。THYMでの経験は、皆さんの人生にとってかけがえのない財産となるでしょう。新しいことに挑戦し、自分自身を成長させたいと願う皆さんを、全力でサポートします。
@@ -760,19 +731,17 @@
                         </div>
                     </details>
                     <details
-                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden"
+                        class="mb-4 bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
                     >
                         <summary
-                            class="flex items-center justify-between p-4 bg-indigo-500 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-indigo-600"
+                            class="flex items-center justify-between p-4 bg-blue-600 text-white font-medium rounded-t-lg transition duration-200 ease-in-out hover:bg-blue-700"
                         >
                             <span class="text-lg"
                                 >Q26.
                                 THYMの最新情報や日々の活動はどこで確認できますか？</span
                             >
                         </summary>
-                        <div
-                            class="p-4 text-gray-700 bg-indigo-50 rounded-b-lg"
-                        >
+                        <div class="p-4 text-gray-700 bg-blue-50 rounded-b-lg">
                             <p class="mb-2">
                                 A26.
                                 以下の公式Instagramアカウントで確認できます。
@@ -782,7 +751,7 @@
                                     <a
                                         href="https://www.instagram.com/thym_inc?igsh=MWQyZXJkeDl3cG9u"
                                         target="_blank"
-                                        class="text-indigo-600 hover:underline"
+                                        class="text-blue-600 hover:underline"
                                         >THYM公式</a
                                     >
                                 </li>
@@ -790,7 +759,7 @@
                                     <a
                                         href="https://www.instagram.com/wuu_official_jp?igsh=MXExank3ZXhlMXJsOA=="
                                         target="_blank"
-                                        class="text-indigo-600 hover:underline"
+                                        class="text-blue-600 hover:underline"
                                         >Wuu公式</a
                                     >
                                 </li>
@@ -798,7 +767,7 @@
                                     <a
                                         href="https://www.instagram.com/wuu_fest?igsh=M2dubHpocTYxbWJ5"
                                         target="_blank"
-                                        class="text-indigo-600 hover:underline"
+                                        class="text-blue-600 hover:underline"
                                         >wuuフェス公式</a
                                     >
                                 </li>
@@ -811,7 +780,7 @@
             <footer
                 class="text-center mt-10 pt-6 border-t border-gray-300 text-gray-600 text-sm"
             >
-                <p>&copy; 2023 THYM（タイム）All rights reserved.</p>
+                <p>&copy; 2025 THYM（タイム）All rights reserved.</p>
             </footer>
         </div>
     </body>
