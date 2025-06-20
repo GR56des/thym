@@ -47,14 +47,17 @@
                     position: static !important; /* Disable sticky on mobile */
                     top: auto !important; /* Ensure top property is reset */
                     align-self: auto !important; /* Ensure align-self is reset */
+                    /* Add explicit bottom margin for clear separation on mobile */
+                    margin-bottom: 2.5rem !important; 
                 }
             }
         </style>
     </head>
     <body class="text-gray-800">
         <!-- Header/Title Section - Clean and prominent, with a muted border for a stylish look -->
+        <!-- Reduced vertical padding on small screens for better mobile visibility -->
         <header
-            class="bg-white py-10 px-6 rounded-b-3xl shadow-lg mb-12 border-b-4 border-gray-700"
+            class="bg-white py-10 sm:py-6 px-6 rounded-b-3xl shadow-lg mb-12 border-b-4 border-gray-700"
         >
             <div class="max-w-5xl mx-auto text-center">
                 <h1
